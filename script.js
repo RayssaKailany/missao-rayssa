@@ -37,6 +37,6 @@ function mostraPergunta() {
     }
 }
 
-mostraPergunta()
+mostraPergunta();
 
 

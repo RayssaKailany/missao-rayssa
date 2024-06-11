@@ -6,17 +6,17 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "Pergunta 1",
+        enunciado: "Qual a melhor maneira de se combater o desmatamento?",
         alternativas: [
-            "Alternativa 1",
-            "Alternativa 2"
+            "Reflorestamento de áreas degradadas",
+            "Implementação de leis mais rigorosas para a proteção das florestas"
         ]
     },
     {
-        enunciado: "Pergunta 2",
+        enunciado: "Como podemos combater a desigualdade social de forma eficaz e sustentável?",
         alternativas: [
-            "Alternativa 1",
-            "Alternativa 2"
+            "Implementar programas de educação e formação profissional acessíveis a todos",
+            "Políticas de redistribuição de renda e oportunidades"
         ]
     }
 ]; 

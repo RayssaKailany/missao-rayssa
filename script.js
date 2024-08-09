@@ -24,10 +24,20 @@ const perguntas = [
 let atual = 0;
 let perguntaAtual;
 
+// código omitido
+
 function mostraPergunta() {
+    if (atual >= perguntas.length) {
+        mostraResultado();
+        return;
+    }
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
+    caixaAlternativas.textContent = "";
+    mostraAlternativas();
 }
+
+// código omitido
 
 mostraAlternativas();
 function mostraAlternativas(){
@@ -54,5 +64,6 @@ function respostaSelecionada(opcaoSelecionada){
     mostraPergunta();
 }
 mostraPergunta();
+
 
 

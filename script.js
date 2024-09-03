@@ -1,78 +1,81 @@
-const caixaPrincipal = document.querySelector(".caixa-principal");
-const caixaPerguntas = document.querySelector(".caixa-perguntas");
-const caixaAlternativas = document.querySelector(".caixa-alternativas");
-const caixaResultado = document.querySelector(".caixa-resultado");
-const textoResultado = document.querySelector(".texto-resultado");
+
+const caixa Principal document.querySelector(".caixa-principal");
+
+const caixaPerguntas document.querySelector(".caixa-perguntas");
+
+const caixaAlternativas document.querySelector(".caixa-alternativas"); 
+
+const caixaResultado document.querySelector(".caixa-resultado");
+
+const textoResultado document.querySelector(".texto-resultado");
 
 const perguntas = [
+
+{
+
+enunciado: "Como você acredita que podemos combater o racismo na sociedade?",
+
+alternativas: [
+
+{
+
+texto: "Participando de campanhas de conscientização e educação sobre igualdade racial.",
+
+afirmacao: "afirmacaol"
+},
     {
-        enunciado: "Qual a melhor maneira de se combater o desmatamento?",
-        alternativas: [
-            "Reflorestamento de áreas degradadas",
-            "Implementação de leis mais rigorosas para a proteção das florestas"
-        ]
-    },
+
+texto: "Denunciando atos de discriminação e apoiando políticas públicas inclusivas.",
+
+afirmacao: "afirmacao2"
+
+    }
+    ]
+},
     {
-        enunciado: "Como podemos combater a desigualdade social de forma eficaz e sustentável?",
-        alternativas: [
-            "Implementar programas de educação e formação profissional acessíveis a todos",
-            "Políticas de redistribuição de renda e oportunidades"
-        ]
+
+enunciado: "Como você pode ajudar a combater a disseminação de fake news, especialmente as que perpetuam o racismo?",
+
+alternativas: [
+
+{
+
+texto: "Verificando a veracidade das informações antes de compartilhar qualquer conteúdo, especialmente sobre temas sensíveis como racismo.",
+
+afirmacao: "afirmacao3"
+},
+    {
+
+texto: "Educando amigos e familiares sobre os perigos das fake news e incentivando-os a não compartilhar conteúdos falsos que perpetuam o racismo.",
+
+afirmacao: "afirmacao4"
     }
-]; 
+]
+        
+},
+    {
 
-let atual = 0;
-let perguntaAtual;
+enunciado: "Como podemos incentivar o uso de energia solar e outras formas de energia limpa, especialmente em comunidades carentes?",
 
-// código omitido
+alternativas: [
 
-function mostraPergunta() {
-    if (atual >= perguntas.length) {
-        mostraResultado();
-        return;
+{
+
+texto: "Defendendo politicas públicas que subsidiem a energia solar para familias de baixa renda.",
+
+afirmacao: "afirmacao5"
+},
+    {
+
+texto: "Promovendo a instalação de painéis solares em escolas e centros comunitários de comunidades marginalizadas.",
+
+afirmacao: "afirmacao6"
+
+      }
+
+    ]
+
     }
-    perguntaAtual = perguntas[atual];
-    caixaPerguntas.textContent = perguntaAtual.enunciado;
-    caixaAlternativas.textContent = "";
-    mostraAlternativas();
-}
 
-// código omitido
-
-mostraAlternativas();
-function mostraAlternativas(){
-    for(const alternativa of perguntaAtual.alternativas) {
-        const botaoAlternativas = document.createElement("button");
-        botaoAlternativas.textContent = alternativa.texto;
-        botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
-        caixaAlternativas.appendChild(botaoAlternativas);
-    }
-}
-function respostaSelecionada(opcaoSelecionada){
-    atual++;
-    mostraPergunta();
-}
-
-let atual = 0;
-let perguntaAtual;
-let historiaFinal = "";
-
-function respostaSelecionada(opcaoSelecionada){
-    const afirmacoes = opcaoSelecionada.afirmacoes;
-    historiaFinal = afirmacoes;
-    atual++;
-    mostraPergunta();
-}
-mostraPergunta();
-
-// código omitido
-
-function mostraResultado() {
-    caixaPerguntas.textContent = "Em 2049...";
-    textoResultado.textContent = historiaFinal;
-    caixaAlternativas.textContent = "";
-}
-
-// código omitido
-
+];
 
